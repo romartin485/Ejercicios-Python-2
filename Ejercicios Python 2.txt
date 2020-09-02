@@ -1,0 +1,57 @@
+#1.Crear una Tupla con 15 edades de persnas e imprimir las personas mayores de 10 años
+
+edad = (3,40,50,30,25,12,65,42,66,58,18,55,62,70,57)
+for a in range (len(edad)):
+    if edad[a] >= 40:
+        print(edad[a])
+
+#2.Pedir 10 nombre y almacenarlos en un a lista
+
+#definimos una lista vacia
+nom=[]
+#disponemos un ciclo de 5 vueltas
+for x in range(10):
+    valor=(input("Ingrese un Nombre:"))
+    nom.append(valor)
+
+#imprimimos la lista    
+print(nom)
+
+#3.Buscar en una lista un nombre almacenado
+
+#definimos una lista vacia
+nombre=[]
+#disponemos un ciclo de 5 vueltas
+for x in range(4):
+    persona=(input("Ingrese un Nombre:"))
+    nombre.append(persona)
+Check = input("Dígame su nombre: ")
+if Check in nombre:
+  print("Esta persona está en la Base de Datos")
+else:
+  print("Esta persona no está en la Base de Datos")
+
+#4.Pedir Digitar un año y decir si es Bisiesto o No.
+
+def bisiesto(x):
+  if x%4==0 and (not(x%100==0) or x%400==0 ):
+    texto='es bisiesto.'
+  else:
+    texto='es un año NO bisiesto.'
+  return texto
+x=int(input('Introduzca un año entre 1600 y 2500:'))
+print(x,bisiesto(x))
+
+#5.Pedir 10 numeros y almacenarlos en una lista e imprimir en una linea cuales son pares y en otra los impares
+
+pares=[]
+impares=[]
+for x in range (4):
+    val=int(input("Ingrese un Número:"))
+    if val%2 ==0:
+        pares.append(val)
+    else:
+        impares.append(val)
+print("\nLos numeros pares son:",pares)
+print("\nLos numeros impares son:",impares)
+
